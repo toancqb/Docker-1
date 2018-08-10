@@ -1,0 +1,12 @@
+docker pull nginx
+docker run -d --name overlord -p $(docker-machine ip Char):5000:80 --restart=always nginx
+
+#docker run -d --name container-name -p localhost:80:80 
+#	-v myContainer/configDir:myImage/configDir --restart=always image-name
+#
+#--detach, -d  : Run container in background & print container ID
+#--name        : Assign a name to container
+#--public, -p  : Publish a container's port to the host
+#--volume, -v  : Bind mount a volume
+#--restart     : Restart policy to apply when a container exits
+#--interactive, -i : Keep STDIN open even if not attached
